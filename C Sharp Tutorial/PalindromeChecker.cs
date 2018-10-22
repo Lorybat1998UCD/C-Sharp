@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 namespace C_Sharp_Tutorial
 {
 	public class PalindromeChecker
