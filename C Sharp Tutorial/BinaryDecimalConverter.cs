@@ -82,7 +82,7 @@ namespace C_Sharp_Tutorial
 					decNumber = HexToDecimal(n);
 					v = DecimalToBinary(decNumber.ToString());
 					Console.Write("Binary equivalent of " + n + " is ");
-					while (v.Count > 0)o
+					while (v.Count > 0)
 						Console.Write(s.Pop());
 					break;
 			}
@@ -90,7 +90,7 @@ namespace C_Sharp_Tutorial
 
 		private static int HexToDecimal(string n)
 		{
-			int intN = Convert.ToInt64(Convert.ToInt64(n), 16);
+			int intN = (int) Convert.ToInt64(n, 16);
 			int remainder=0, decimal_number = 0;
 			for (int count = 0; intN > 0; count++)
 			{
@@ -103,9 +103,9 @@ namespace C_Sharp_Tutorial
 		}
 
 
-		public string octal_to_decimal(string m_value)
+		/*public string octal_to_decimal(string m_value)
 		{
-			double i, j, x = 0;
+			int i, j, x = 0;
 			Int64 main_value;
 			int k = 0;
 			bool pw = true, ch;
@@ -125,13 +125,13 @@ namespace C_Sharp_Tutorial
 			{
 				do
 				{
-					i = main_value % 10;                                        // Return Remainder
-					i = i * Convert.ToDouble(Math.Pow(8, x));                   // calculate power
+					i = (int) main_value % 10;                                        // Return Remainder
+					i = i * Convert.ToInt32(Math.Pow(8, x));                   // calculate power
 					if (pw)
 						x++;
 					else
 						x--;
-					o_to_d = o_to_d + i;                                        // Saving Required calculated value in main variable
+					main_value = main_value + i;                                       // Saving Required calculated value in main variable
 					main_value = main_value / 10;                               // Dividing the main value 
 				}
 				while (main_value >= 1);
@@ -146,7 +146,7 @@ namespace C_Sharp_Tutorial
 				x = -1;
 			}
 			return (Convert.ToString(o_to_d));
-		}
+		}*/
 
 		private static Stack<string> DecimalToHex(string n)
 		{
